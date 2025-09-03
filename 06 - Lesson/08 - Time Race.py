@@ -2,7 +2,7 @@
 #   Lesson 6
 #   Giorgi Goderdzishvili
 #
-#   რიცხვის გამოცნობა ტაიმერით
+#   სპრინტის იმიტაცია
 
 import random
 from datetime import datetime, timedelta
