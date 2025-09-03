@@ -10,7 +10,7 @@ print("მოდით დავთვალოთ გამოყენებ�
 user_input = input("გთხოვთ შეიყვანოთ გასაანალიზებელი ტექსტი: ")
 print(" ." * 20)
 
-normalized_list = set(user_input.lower().split())
+normalized_list = list(user_input.lower().split())
 for word in sorted(normalized_list, key = len, reverse=True):
     word_stats[word] = word_stats.get(word, len(word))
 
