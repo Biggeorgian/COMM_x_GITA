@@ -1,0 +1,351 @@
+/* center wrapper */
+body {
+    text-align:center;
+    background: #0c335c top center url("../images/bg.png") repeat-x;
+    color: white;
+    font-family: calibre, sans-serif;
+}
+div.wrapper {
+    width: 600px;
+    margin:0 auto;
+    text-align: left
+}
+
+/* Header */
+@keyframes cloud-animation {
+    from {background-position: 0% 0%}
+    to {background-position: 1000% 0%}
+}
+
+.animated-clouds {
+    background-image: url("../images/clouds.png");
+    background-repeat: repeat-x;
+    animation: cloud-animation 400s linear infinite;
+}
+
+header {
+    height:350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+header .wrapper {
+    height: 350px;
+    background: top center url("../images/header_bg.png") no-repeat;
+    position: relative
+}
+
+/* navigation */
+nav {
+    width: 100%;
+    padding: 10px;
+    position: absolute;
+    height: 70px;
+    bottom: 0px;
+    background: transparent top center url("../images/nav_bg.png") repeat-x;
+}
+
+ul#navigation {
+    display: flex;
+    justify-content: center;
+}
+
+ul#navigation li {
+    list-style:none;
+    margin: 0 10px;
+    padding-top: 5px;
+    text-align:center
+}
+
+ul#navigation a {
+    display: block;
+    padding: 5px 15px;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+ul#navigation a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+ul#navigation a.active {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+@keyframes submarine-animation {
+    0% {background-position: 130% 50%}
+    33% {background-position: 75% 70%}
+    66% {background-position: 30% 40%}
+    100% {background-position: -110% 80%}
+}
+
+.animated-submarine {
+    background-image: url("../images/submarine.png");
+    background-repeat: no-repeat;
+    animation: submarine-animation 60s linear infinite;
+}
+
+@keyframes diver-animation {
+    0% {background-position: -30% 50%}
+    10% {background-position: 0% 60%}
+    20% {background-position: 25% 40%}
+    50% {background-position: 50% 55%}
+    80% {background-position: 75% 45%}
+    90% {background-position: 100% 75%}
+    100% {background-position: 130% 60%}
+}
+
+.animated-divers {
+    background-image: url("../images/divers.png");
+    background-repeat: no-repeat;
+    animation: diver-animation 240s linear infinite;
+}
+
+main .wrapper {
+    margin-top:10px;
+    padding:15px;
+    border-radius:18px;
+    background-color: rgba(20, 50, 90, 0.4);
+}
+
+section {
+    padding: 5px 0
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 12px 0px 6px;
+}
+
+p {
+    margin: 2px 0 8px;
+}
+
+figure {
+    border: 4px solid white;
+    border-radius: 30px;
+    background-color: white;
+}
+
+figure.left {
+    float:left;
+    margin: 8px 18px 8px -120px;
+}
+
+figure.right {
+    float:right;
+    margin: 8px -120px 8px 18px;
+}
+
+figure img {
+    border-radius: 30px
+}
+figcaption {
+    color: #0c335c;
+    text-align: center
+}
+
+@keyframes rotate-right {
+    from {rotate: 0grad; box-shadow: 1px 1px 1px #081b30;}
+    to {rotate: 10grad; box-shadow: 2px 2px 5px #081b30;}
+}
+
+@keyframes rotate-left {
+    from {rotate: 0grad; box-shadow: 1px 1px 1px #081b30;}
+    to {rotate: -10grad; box-shadow: 2px 2px 5px #081b30;}
+}
+
+figure.left:hover {
+    animation: rotate-left 0.5s ease alternate;
+    animation-fill-mode: forwards;
+    cursor: pointer
+}
+
+figure.right:hover {
+    animation: rotate-right 0.5s ease alternate;
+    animation-fill-mode: forwards;
+    cursor: pointer
+}
+
+.rounded-corners {
+    border-radius: 25px
+}
+
+strong {
+    font-weight: bold;
+    background-color: #092849;
+    padding:2px 4px 4px;
+    border-radius: 3px
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease;
+}
+
+/* Modal content (image) */
+.modal-content {
+  position: relative;
+  width: 700px;
+  height: auto;
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 5px;
+  overflow: hidden;
+  animation: zoomIn 0.5s;
+}
+
+@keyframes zoomIn {
+  from {transform: scale(0.6);}
+  to {transform: scale(1);}
+}
+
+.modal.show {
+  display: flex;
+  opacity: 1;
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #ffffff;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+/* Caption of modal image */
+.caption {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+footer {
+    padding:50px 0 100px;
+    background: bottom left url("../images/footer_bg.jpg") repeat-x;
+}
+
+img.footer-logo {
+    border-radius: 25px;
+}
+footer > div {
+    display:flex
+}
+footer div .column {
+ width:30%;
+ margin:10px
+}
+ul#footer-nav {
+    margin: 0;
+    padding: 0
+}
+
+ul#footer-nav li {
+    list-style:none;
+    margin: 0;
+    padding: 5px 0 0;
+    text-align:left
+}
+
+ul#footer-nav a {
+    display: block;
+    width:100%;
+    padding: 5px 15px 5px 25px;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+ul#footer-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+ul#footer-nav a.active {
+    background-color: rgba(30, 167, 210, 0.2);
+}
+
+@keyframes social-animation {
+    from {margin-left: 0}
+    to {margin-left: -15px}
+}
+#social {
+    list-style:none;
+}
+#social li {
+    margin: 10px 0
+}
+#social li:hover {
+    animation: social-animation 0.5s linear alternate 1;
+}
+#social a {color:white; text-decoration:none}
+
+
+.vacancy {text-align:left}
+.vacancy h3 {font-size:12px}
+.vacancy p {font-size:10px}
+.vacancy a, .vacancy a:visited {color: #5db0b6}
+.vacancy a:hover, .vacancy a:active {color: #b3b65d}
+
+dl {padding-left:20}
+dt {font-weight: bold}
+dd {
+    list-style-type: circle;
+    margin: 5px 0px 5px 20px
+}
+
+form {
+    max-width: 570px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* padding-ის გამო ზომა რომ არ გაიზარდოს */
+}
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3;
+}

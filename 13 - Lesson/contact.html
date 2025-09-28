@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang=ka>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>კაპიტანი ნემო</title>
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body class="hobby">
+    <header class="animated-clouds">
+        <div class="wrapper">
+            <nav>
+                <ul id="navigation">
+                    <li><a href="index.html">დასაწყისი</a></li>
+                    <li><a href="hobby.html">კაპიტანი ნემო</a></li>
+                    <li><a class="active" href="contact.html">დაგვიკავშირდით</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="animated-divers">
+        <div class="wrapper">
+            <section>
+                <h1>თუ შეძლებთ მოგვძებნეთ:</h1>
+                <p>ჩვენი ბოლო მარშრუტი ასე გამოიყურებოდა. შეგიძლიათ მოგვძებნოთ თაბორის კუნძულთან ახლომახლო, ან წაიკითხოთ საიდუმლო კუნძული.</p>
+                <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1mJvrPuu9qq9LC7mCdwKK0n5cglrtN-Y&ehbc=2E312F" width="570" height="480"></iframe>
+            </section>
+            <section>
+                <h2>ან შეგიძლიათ დაგვიკავშირდეთ:</h2>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="name">სახელი:</label>
+                        <input type="text" id="name" name="user_name" required pattern="[A-Za-z\u10A0-\u10FF\s]+"
+                        title="გთხოვთ, გამოიყენოთ მხოლოდ ქართული ან ლათინური ასოები და შუალედი.">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">ელფოსტა:</label>
+                        <input type="email" id="email" name="user_email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">ტელეფონი:</label>
+                        <input type="tel" id="phone" name="user_phone" required pattern="^\+?[0-9\s-()]{7,15}$" title="შეიყვანეთ ვალიდური ტელეფონის ნომერი (მაგ: +995 555 123456).">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">შეტყობინება:</label>
+                        <textarea id="message" name="user_message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit">გაგზავნა</button>
+                </form>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="wrapper">
+            <div class="column">
+                <p>
+                    <img src="images/footer_logo.jpg" class="footer-logo" alt="Nautilus Logo" Title="Logo" />
+                </p>
+                <ul id="footer-nav">
+                    <li><a href="index.html">საწყისი</a></li>
+                    <li><a href="hobby.html">კაპიტანი ნემო</a></li>
+                    <li><a class="active" href="contact.html">დაგვიკავშირდით</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>სოციალური მედია</h3>
+                <ul id="social">
+                    <li><a href="#Facebook">Facebook</a></li>
+                    <li><a href="#Instagram">Instagram</a></li>
+                    <li><a href="#Threads">Threads</a></li>
+                    <li><a href="#Twitter">Twitter</a></li>
+                    <li><a href="#TikTok">TikTok</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <div class="vacancy">
+                    <h3>ვაკანსია კოკის პოზიციაზე</h3>
+                    <p>წყალქვეშა ხოლმალდი ნაუტილუსი აცხადებს ვაკანსიას კოკის პოზიციაზე</p>
+                    <p>გართობა: შესანიშნავი,<br />ანაზღაურება: ღირსეული<br />დაზღვევა: გარანტირებული</p>
+                    <p><a href="contact.html">დაგვიკავშირდით</a></p>
+                </div>
+                <div class="vacancy">
+                    <h3>გვესაჭიროება ქირურგი</h3>
+                    <p>გთავაზობთ საინტერესო სამსახურს წყალქვეშა ხომალდზე</p>
+                    <p>აღჭურვილობა: შესანიშნავი,<br />ანაზღაურება: ღირსეული<br />გართობა: გარანტირებული</p>
+                    <p><a href="contact.html">დაგვიკავშირდით</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function openModal(modalId, caption) {
+            let modal = document.getElementById(modalId);
+            modal.style.display = "flex";
+            modal.classList.add("show");
+            let message = modal.querySelector(".caption");
+            message.innerText = caption;
+        }
+
+        function closeModal(modalId) {
+            let modal = document.getElementById(modalId);
+            modal.classList.remove("show");
+            setTimeout(function () {
+                modal.style.display = "none";
+                modal.querySelector(".caption").innerText = "";
+            }, 300);
+        }
+    </script>
+</body>
+</html>
